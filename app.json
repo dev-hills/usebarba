@@ -4,17 +4,24 @@
     "slug": "usebarba",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/splash-icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "cover",
+      "imageWidth": 700,
+      "backgroundColor": "#121212",
+      "enableFullScreenImage_legacy": true
+    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#121212"
       }
     },
     "web": {
@@ -28,9 +35,14 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "resizeMode": "cover",
+          "imageWidth": 700,
+          "backgroundColor": "#121212",
+          "enableFullScreenImage_legacy": true,
+          "setOptions": {
+            "duration": 1000,
+            "fade": true
+          }
         }
       ]
     ],
