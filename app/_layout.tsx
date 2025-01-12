@@ -8,9 +8,10 @@ import "./globals.css";
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
-  });
+  // const [loaded] = useFonts({
+  //   sfpro: require("../assets/fonts/SFPRODISPLAYBOLD.otf"),
+  // });
+  const loaded = true;
 
   useEffect(() => {
     if (loaded) {
