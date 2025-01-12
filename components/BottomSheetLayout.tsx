@@ -2,6 +2,7 @@ import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import BottomSheet, { BottomSheetView } from "@gorhom/bottom-sheet";
 import XWhite from "@/assets/icons/X-White";
+import { router } from "expo-router";
 
 const BottomSheetLayout = forwardRef((props, ref) => {
   const bottomSheetRef = useRef<BottomSheet>(null);
@@ -44,13 +45,19 @@ const BottomSheetLayout = forwardRef((props, ref) => {
           </View>
 
           <View className="w-[100%] flex items-center justify-center flex-col gap-[20px]">
-            <TouchableOpacity className="bg-[#1DB954] w-[100%] h-[47px] px-[16px] rounded-[10px] flex items-center justify-center">
+            <TouchableOpacity
+              onPress={() => router.push("/(Auth)/sign-up")}
+              className="bg-[#1DB954] w-[100%] h-[47px] px-[16px] rounded-[10px] flex items-center justify-center"
+            >
               <Text className="font-roboto font-medium text-white text-[18px] text-center">
                 Sign Up
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity className=" w-[100%] h-[50px] px-[15px] rounded-2xl flex items-center justify-center">
+            <TouchableOpacity
+              onPress={() => router.push("/(Auth)/sign-in")}
+              className=" w-[100%] h-[50px] px-[15px] rounded-2xl flex items-center justify-center"
+            >
               <Text className="font-roboto font-medium text-[#1DB954] text-[18px] text-center">
                 Login
               </Text>

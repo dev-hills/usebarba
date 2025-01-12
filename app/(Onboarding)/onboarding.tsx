@@ -11,10 +11,15 @@ import { Video, ResizeMode } from "expo-av";
 import { OnboardingSlides } from "@/constants";
 import BottomSheetLayout from "@/components/BottomSheetLayout";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Session } from "@supabase/supabase-js";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
 
-const Onboarding = () => {
+const Onboarding = ({ session }: { session: Session }) => {
+  useEffect(() => {
+    console.log(session);
+  }, []);
+
   const bottomSheetRef = useRef<{ expand: () => void; collapse: () => void }>(
     null
   );
